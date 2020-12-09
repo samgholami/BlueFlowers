@@ -20,10 +20,14 @@ body,ul,li,h2,h3,p{
 
 /**********-------header-----------*****/
 header{
-	background-color:#222A32;
-	height:1000;
-	padding-bottom: 40px;
+    height: 700px;
+    padding-bottom: 40px;
+    background-image: url(images/header-mobile.jpg);
+    background-repeat: no-repeat;
+    background-position: center top;
 }
+
+
 nav ul {
 	display:flex;
 	justify-content: flex-end;
@@ -40,7 +44,7 @@ nav a{
     border-radius:6px;
     border: 1px solid #6699FF;
     padding:2px 5px;
-    width: 30px;
+    width:50px;
     margin: 10px 4px;
     text-decoration: none;
 }
@@ -54,20 +58,41 @@ nav a:hover{
 
 h1{
 	font-family:'Lobster Two', cursive;
-	font-size:2.7em;
+	font-size:2.8em;
 	color:#f7941d;
 	text-align: center;
-	position:relative;
 	margin-bottom:5px;
+	margin-top: 130px;
+	
 	
 }
-header img{position:absolute;}
+
+#h1{
+	width:350px;
+	margin:auto;
+	position:relative;
+}
+
+header img{
+	position:absolute;
+	
+}
+#leaves{
+	left:26px;
+	top:27px;
+}
+
+#flowers{
+	right:28px;
+	top:-11px;
+}
+
 
 header h2{
 	color:#e3d6c3;
 	font-size:1.7em;
 	text-align:center;
-	margin-bottom:130px;
+	margin-bottom:210px;
 }
 
 #CTA li {
@@ -75,34 +100,38 @@ header h2{
      border-radius:6px;
      border: 1px solid #f7941d;
      padding: 10px;
-     width:160px;
-     margin: 20px auto;
+     width:200px;
+     margin: 30px auto;
 	 list-style-type: none;
-	
+	 color: #081116;
 	 text-align: center;
-     font-size:1.2rem;
+     font-size:1.5rem;
 }
 
 #CTA a{
 	text-decoration: none;
-	/* color: #081116;*/
+	
 }
 	
 #CTA a:hover{
-	color:#e3d6c3;
+	color:#081116;
 	text-decoration:underline;
 }
 
 /*****---------section Album------******/
-
+#album{
+    background-image: url(images/background.jpg);
+    background-position: left top;
+    background-repeat: no-repeat;
+}
 #album img{
 	width:70vw;
 	height:auto;
-	margin:30px 15vw;
+	margin:30px 15vw 10px;
 }
-#audiocontrol{
-	height:30px;
-	background-color: #e3d6c3;
+#audiocontrol img{
+    width:90vw;
+	height:auto;
 }
 
 #list{
@@ -115,15 +144,16 @@ header h2{
 	list-style-type: none;
 	display:flex;
 	border-top: 1px solid #E3D6C3;
-
+    background-image: url(images/playbutton.png);
+    background-position: left center;
+    background-repeat: no-repeat;
 	
 }
 .list h3{
-	margin:5px 20px;
-	width:60%;
-	color:#f7941d;
-	
-    
+    margin: 5px 30px;
+    width: 60%;
+    color: #f7941d;
+   
  }
 .list p{
 	margin:0px;
@@ -159,7 +189,7 @@ header h2{
   background-color:transparent;
   color: #E3D6C3;
   cursor: pointer;
-  padding: 5px 0px;
+  padding: 5px 10px;
   width: 100%;
   border: none;
   text-align: left;
@@ -169,7 +199,7 @@ header h2{
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .active, .collapsible:hover {
-  background-color:#081116;
+  background-color:#0A1F28;
 }
 
 /* Style the collapsible content. Note: hidden by default */
@@ -202,3 +232,111 @@ a{
 a:hover{
 	color:#E3D6C3;
 }
+
+
+
+@media only screen and (min-width: 510px){
+header{
+    background-image: url(images/header-580.jpg);
+    background-repeat: no-repeat;
+    background-position: right top;
+	}
+	
+	#h1{margin:0px;}
+	header h2,#CTA li {
+		margin:50px;
+	}
+	header h2{
+		text-align: left;
+	}
+	#album{
+    background-image: none;
+	}
+	#parallex1{
+    height:100vh;
+    background-image: url(images/album.jpg);	
+	background-attachment: fixed;
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+	}
+	#songlist{
+    display: flex;
+    flex-wrap: wrap;
+    margin:0px 40px;
+    background-color: #081116;
+    border-radius: 6px;
+    border: 1px solid #081116;
+	
+	}
+	#songlist img{
+		flex-basis:35%;
+		order:1;
+		margin:50px 10px 30px;
+		width:40vw;
+	}
+	#songlist #audiocontrol{
+		width:100%;
+		order:3;
+		margin:0px auto 30px;
+	}
+	#songlist #list{
+		order:2;
+		flex-basis:40%;
+		padding:0px;
+		margin:auto;
+	}
+	#collaps{
+    margin:0px 40px;
+    background-color: #081116;
+    border-radius: 6px;
+    border: 1px solid #081116;
+		
+	}
+	#hero h2{
+		margin-top:40px;
+	}
+	#lyric{
+		display:grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-column-gap:33px;
+	}
+	#lyric h3{
+		grid-column: 1/4;
+	}
+	
+	#parallex2{
+    height: 100vh;
+    background-image: url(images/hero.jpg);
+    background-attachment: fixed;
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    background-size: cover;   
+	}
+	
+	.background{
+		height:520px;
+		padding:20px 0px;
+		background-color:hsla(33,89%,55%,0.24); 
+	}
+}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
