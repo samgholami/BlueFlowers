@@ -1,0 +1,204 @@
+
+/*$font:'Oswald', sans-serif;
+$font2:'Lobster Two', cursive;
+$primary:#081116;//dark blue
+$secondry:#f7941d;//yellow orange
+$third:#6699ff;//light blue
+$natural:#e3d6c3;*/
+
+@charset "utf-8";
+body,ul,li,h2,h3,p{
+	margin:0px;
+	padding:0px;
+	font-family:'Oswald', sans-serif;
+	font-size:1.2rem;
+	color:#e3d6c3;
+}
+
+
+* { box-sizing: border-box; }
+
+/**********-------header-----------*****/
+header{
+	background-color:#222A32;
+	height:1000;
+	padding-bottom: 40px;
+}
+nav ul {
+	display:flex;
+	justify-content: flex-end;
+	margin:0px 10px;
+
+}
+
+nav a{
+    text-align: center;
+    color: #e3d6c3;
+    font-size: .6rem;
+    list-style-type: none;
+    background-color: #6699ff;
+    border-radius:6px;
+    border: 1px solid #6699FF;
+    padding:2px 5px;
+    width: 30px;
+    margin: 10px 4px;
+    text-decoration: none;
+}
+
+
+nav a:hover{
+	text-decoration: none;
+	background-color:#F7941D;
+	
+    }
+
+h1{
+	font-family:'Lobster Two', cursive;
+	font-size:2.7em;
+	color:#f7941d;
+	text-align: center;
+	position:relative;
+	margin-bottom:5px;
+	
+}
+header img{position:absolute;}
+
+header h2{
+	color:#e3d6c3;
+	font-size:1.7em;
+	text-align:center;
+	margin-bottom:130px;
+}
+
+#CTA li {
+     background-color:#f7941d;
+     border-radius:6px;
+     border: 1px solid #f7941d;
+     padding: 10px;
+     width:160px;
+     margin: 20px auto;
+	 list-style-type: none;
+	
+	 text-align: center;
+     font-size:1.2rem;
+}
+
+#CTA a{
+	text-decoration: none;
+	/* color: #081116;*/
+}
+	
+#CTA a:hover{
+	color:#e3d6c3;
+	text-decoration:underline;
+}
+
+/*****---------section Album------******/
+
+#album img{
+	width:70vw;
+	height:auto;
+	margin:30px 15vw;
+}
+#audiocontrol{
+	height:30px;
+	background-color: #e3d6c3;
+}
+
+#list{
+	margin:30px 0px 50px;
+	padding:0px 9vw;
+	
+}
+
+.list{
+	list-style-type: none;
+	display:flex;
+	border-top: 1px solid #E3D6C3;
+
+	
+}
+.list h3{
+	margin:5px 20px;
+	width:60%;
+	color:#f7941d;
+	
+    
+ }
+.list p{
+	margin:0px;
+	font-size:.6rem;
+	padding:9px 0px;
+	font-family:'Lobster Two', cursive;
+}
+
+#hero h2{
+	font-family:'Lobster Two', cursive;
+	color:#f7941d;
+	font-size:2rem;
+	margin:auto;
+	text-align: center;
+	
+}
+#hero p{
+	margin:20px 12vw;
+	line-height: 1.5rem;
+}
+#lyric{padding:0px 12vw 40px;}
+#lyric h3{
+	font-family:'Lobster Two', cursive;
+	color:#f7941d;
+	font-size:1.2rem;
+	margin:auto;
+	margin:50px 0px 20px;
+}
+
+
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+  background-color:transparent;
+  color: #E3D6C3;
+  cursor: pointer;
+  padding: 5px 0px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size:1rem;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover {
+  background-color:#081116;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+  padding: 15px 18px;
+  font-size:1.4rem;
+  display: none;
+  overflow: hidden;
+  background-color:#081116;
+}
+
+/******-------section event-----------****/
+#event h3{
+	
+	color:#E3D6C3;
+	font-size:1.3rem;
+	margin:20px auto;
+	text-align: center;
+}
+#event .color{
+	color:#B07022;
+	font-size:1.1rem;
+}
+
+/****------footer------*****/
+a{
+	color:#f7941d;
+}
+
+a:hover{
+	color:#E3D6C3;
+}

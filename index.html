@@ -7,20 +7,21 @@
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
 	
 	<!--/ /-------- Google Fonts --------/ /-->
+
 	<link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Miss+Fajardose&family=Pinyon+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,700;1,400;1,700&family=Oswald:wght@300;400&display=swap" rel="stylesheet">
 	
-	<!--/ /-------- Font Awesome --------/ /-->
+        <!--/ /-------- Font Awesome --------/ /-->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 	
 	
 	<!--/ /-------- Styles sheet --------/ /-->
-	
+	<link href="styles.css" rel="stylesheet" type="text/css">
 
 	
 	<!--/ /-------- Needed For Mobile Devices --------/ /-->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
 </head>
 
@@ -29,8 +30,8 @@
 	<header>
 		<nav>
 			<ul>
-				<a href="#"><li >English</li></a>
-			    <a href="#"><li >Farsi</li></a>
+				<a href="#"><li >En</li></a>
+			    <a href="#"><li >Fa</li></a>
 			</ul>
 		</nav>
 		
@@ -41,27 +42,47 @@
 		<h2>Marjan Farsad</h2>
 		
 		<ul id="CTA">
-			<a href="https://music.apple.com/ca/album/blue-flowers/898915284"><li >BUy on iTUne</li></a>
-			<a href="https://www.youtube.com/watch?v=8D8WrQupDAk"><li >Watch Live Preview</li></a>
+			
+			<a href="https://music.apple.com/ca/album/blue-flowers/898915284"><li >Buy on iTUne</li></a>
+			<a href="https://www.youtube.com/embed/lzbSegIq9Qk"><li >Watch Live Preview</li></a>
 		</ul>
 	</header>
 	
 	<section id="album">
 		<div id="songlist">
-          <img src="" alt="album cover">
-          <!-- audio control bar-->
-		   <audio id="myAudio">
-              <source src="https://www.youtube.com/watch?v=u_bkAcHaWB4" type="audio/ogg">
-              <source src="https://www.youtube.com/watch?v=u_bkAcHaWB4" type="audio/mpeg">
-              Your browser does not support the audio element.
-            </audio>
-
-            <p>Blue Flowers</p>
-			<p>preview</p>
-
-            <button onclick="playAudio()" type="button"><img src=""></button>
-          <!--  <button onclick="pauseAudio()" type="button">Pause Audio</button> -->
-		</div>
+          <img src="images/cover.png" alt="album cover" width="394" height="368">
+		  <div id="audiocontrol"></div><!--empty div with background image and border and height-->
+		  <ul id="list">
+			 <li class="list">
+				 
+					 <h3>Our Home</h3>
+					 <p>Preview</p>
+				 
+			 </li> 
+			  
+			   <li class="list">
+				 
+					 <h3>Orange</h3>
+					 <p>Preview</p>
+				 
+			 </li> 
+			  
+			   <li class="list">
+				
+					 <h3>Myth</h3>
+					 <p>Preview</p>
+				 
+			 </li> 
+			  
+			   <li class="list">
+			
+					 <h3>Dreams</h3>
+					 <p>Preview</p>
+				
+			 </li> 
+			  
+		  </ul>
+         
 		
 		<div id="hero">
 		  <h2>Marjan Farsad</h2>
@@ -72,40 +93,39 @@
 		<div id="lyric">
 			<h3>Blue Flowers Album</h3>
 			
-              <div id="collaps">
+            
 				  
                   <button type="button" class="collapsible">Blue Flowers</button>
                   <div class="content">
-                    <p>Lorem ipsum...</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 				  </div>
 				  
 				   <button type="button" class="collapsible">Last Night</button>
                    <div class="content">
-                     <p>Lorem ipsum...</p>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                    </div>
 				  
-				   <button type="button" class="collapsible">our Home</button>
+				   <button type="button" class="collapsible">Our Home</button>
                    <div class="content">
-                     <p>Lorem ipsum...</p>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                    </div>
 				  
 				   
-                  <button type="button" class="collapsible">Cream</button>
+                  <button type="button" class="collapsible">Dream</button>
                   <div class="content">
-                    <p>Lorem ipsum...</p>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 				  </div>
 				  
 				   <button type="button" class="collapsible">Myth</button>
                    <div class="content">
-                     <p>Lorem ipsum...</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                    </div>
 				  
 				   <button type="button" class="collapsible">Orange</button>
                    <div class="content">
-                     <p>Lorem ipsum...</p>
-                   </div>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 				  
-              </div><!--div id collaps-->   
+              
 			
 		</div><!-- div id lyric-->
 		
@@ -113,10 +133,9 @@
 	
 	<footer>
 		<section id="event">
-			<h3>Realease of new Album</h3>
-			<h3>concert and Tours</h3>
-			<h3>Art</h3>
-         
+         <h3 class="color">Realese of new Album</h3>
+		 <h3>concert and tours</h3>
+		 <h3 class="color">Art</h3>
 		</section>
 		
 		<div class="container">
@@ -158,17 +177,22 @@
             <li><a href="#"><i class="fab fa-slack"></i></a></li>
         </ul>
 	</footer>
-	
-     <script>
-      var x = document.getElementById("myAudio"); 
+	<script>
+      var coll = document.getElementsByClassName("collapsible");
+      var i;
 
-      function playAudio() { 
-        x.play(); 
-      } 
-
-      function pauseAudio() { 
-        x.pause(); 
-      } 
-      </script>
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.display === "block") {
+            content.style.display = "none";
+          } else {
+            content.style.display = "block";
+          }
+        });
+      }
+</script>
+  
 </body>
 </html>
