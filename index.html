@@ -16,6 +16,7 @@
 	
 	
 	<!--/ /-------- Styles sheet --------/ /-->
+	<link rel="icon" type="image/x-icon" href="images/favicon.png">
 	<link href="styles.css" rel="stylesheet" type="text/css">
 
 	
@@ -26,7 +27,7 @@
 </head>
 
 <body>
-	
+	<div id="page">
 	<header>
 		<nav>
 			<ul>
@@ -151,22 +152,22 @@
           <form action="/action_page.php">
             <div class="row">
 				
-               <div class="col">
+               <div id="col">
                 <a href="#" class="fb btn">
-                  <i class="fa fa-facebook fa-fw"></i> Login with Facebook
+                 <i class="fab fa-facebook"></i> Login with Facebook
                 </a>
                </div>
 
-              <div class="col">
-                <div class="hide-md-lg">
+              <div >
+                <div id="hide-md-lg">
                   <p>Or</p>
                 </div>
 				  
-				 <label for="username">username</label>
-                    <input id="username" type="text" name="username" placeholder="Username" required>
+				 <label for="username" ><b>username</b></label>
+                    <input id="username" type="text" name="username" placeholder="Jhonsmith@gmail.com" required>
                 
 				  
-				  <label for="password">Password</label>
+				  <label for="password" ><b>Password</b></label>
                     <input id="password" type="password" name="password" placeholder="********" required>
 				  
 				  
@@ -178,6 +179,8 @@
             </div>
           </form>
         </div>
+
+        
         <ul id="social">
             <li><a href="#"><i class="fab fa-facebook"></i></a></li>
             <li><a href="#"><i class="fab fa-google-plus-square"></i></a></li>
@@ -186,6 +189,7 @@
             <li><a href="#"><i class="fab fa-slack"></i></a></li>
         </ul>
 	</footer>
+	</div>
 	<script>
       var coll = document.getElementsByClassName("collapsible");
       var i;
