@@ -1,56 +1,81 @@
 <!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8"> 
     <title>BlueFlowers</title>
-        <!--/ /-------- Normalize CSS --------/ /-->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <!--/ /-------- Normalize CSS --------/ /-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
 
-        <!--/ /-------- Google Fonts --------/ /-->
+    <!--/ /-------- Google Fonts --------/ /-->
 
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,700;1,400;1,700&family=Oswald:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,700;1,400;1,700&family=Oswald:wght@300;400&display=swap" rel="stylesheet">
 
-            <!--/ /-------- Font Awesome --------/ /-->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-
-
-        <!--/ /-------- Styles sheet --------/ /-->
-        <link rel="icon" type="image/x-icon" href="images/favicon.png">
-        <link href="styles.css" rel="stylesheet" type="text/css">
+        <!--/ /-------- Font Awesome --------/ /-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
 
-        <!--/ /-------- Needed For Mobile Devices --------/ /-->
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--/ /-------- Styles sheet --------/ /-->
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"/>
+    <link href="styles.css" rel="stylesheet" type="text/css">
+
+
+    <!--/ /-------- Needed For Mobile Devices --------/ /-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!--/ /-------- Script --------/ /-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    <script src="script.js" defer></script>
 
   </head>
 
-   <body>
+  <body>
 	   
       <div id="page">
 		  
       <header>
 		  
-          <nav>
-              <ul>
-                  <a href="#"><li >En</li></a>
-                  <a href="#"><li >Fa</li></a>
-              </ul>
-          </nav>
+         
+        <div id="languageBtn"> 
+          <button type="button" id="Engish">En</button>
+          <button type="button" id="Farsi">Fa</button>
+        </div>      
+         
 		  
-          <div id="h1">
+          <div id="h1" class="En">
             <h1>Blue Flowers</h1>
             <img id="leaves" src="images/leaves.png" alt="headerdecoration" width="18px" height="27px">
             <img id="flowers" src="images/flowers.png" width="47px" height="40px">
           </div>
 
-          <h2>Marjan Farsad</h2>
 
-          <ul id="CTA">
-              <a href="https://music.apple.com/ca/album/blue-flowers/898915284"><li >Buy on iTUne</li></a>
-              <a href="https://www.youtube.com/embed/lzbSegIq9Qk"><li >Watch Live Preview</li></a>
-          </ul>
+          <div id="h1" class="fa">
+            <h1>گلهای آبی</h1>
+            <img id="barg" src="images/leaves.png" alt="headerdecoration" width="18px" height="27px">
+            <img id="gol" src="images/flowers.png" width="47px" height="40px">
+          </div>
+
+         
+
+          <h2 class="En">Marjan Farsad </h2>
+          <h3 class="En">Singer,songwriter,Illustrator </h3>
+          <h2 class="fa">مرجان فرساد</h2>
+          <h3 class="fa"> خواننده, ترانه‌سرا, تصویرگر</h3>
+         
+
+          <ul id="CTA" class="En">
+
+              <a href="https://music.apple.com/ca/album/blue-flowers/898915284" target="_blank" ><li>Buy on iTUne</li></a>
+              <a href="https://youtu.be/8D8WrQupDAk?t=234" data-fancybox ><li>Watch Live Preview</li></a>
+          </ul> 
+          
+          <ul id="CTA" class="fa">
+              <a href="https://music.apple.com/ca/album/blue-flowers/898915284" target="_blank" ><li> iTUne خرید از </li></a>
+              <a href="https://youtu.be/8D8WrQupDAk?t=234" data-fancybox ><li> اجرای زنده</li></a>
+            </ul> 
 		  
 		  
       </header>
@@ -59,204 +84,415 @@
 		  
               <div id="parallex1">
 
-                  <div class="background">
-					  
-                      <div id="songlist">
+                  <div class="background">  
+                    <div id='card'>
+                        <div id='display'>
 
-                        <img src="images/cover2.png" alt="album cover" width="330" height="308">
-                        <img id="audiocontrol" src="images/audiocontrol.png"
-                        alt="audiocontrol" width="650px"	height="80px">	  <ul id="list">
-                           <li class="list">
+                            <div id='header'>
+                              <h1 id='title'></h1>
+                              <p>
+                                <span id='song_title'></span>
+                              </p>
+                            </div>
 
-                                   <h3>Our Home</h3>
-                                   <p>Preview</p>
+                            <div id='image'>
+                              <img src='' alt='' id='art' />
+                            </div>
 
-                           </li> 
+                            <audio controls src='' id='audio'></audio>
 
-                             <li class="list">
-
-                                   <h3>Orange</h3>
-                                   <p>Preview</p>
-
-                           </li> 
-
-                             <li class="list">
-
-                                   <h3>Myth</h3>
-                                   <p>Preview</p>
-
-                           </li> 
-
-                             <li class="list">
-
-                                   <h3>Dreams</h3>
-                                   <p>Preview</p>
-
-                           </li> 
-
-                        </ul>
-                      </div>
-                  </div>
-              </div>
+                        </div>
+                      
+                        <div id='list'>
+                        </div>
+                    </div> <!--closing of card div-->
+                  </div> <!--closing of background div-->
+              </div><!--closing of parallex1 div-->
 		  
 		  
               <div id="parallex2">
                   <div class="background">
                       <div id="collaps">
                           <div id="hero">
-                            <h2>Marjan Farsad</h2>
-                            <p>She was born in 1983 in Tehran, Iran. Marjan Farsad is an animation filmmaker, illustrator, singer, and songwriter. Her debut album “Blue Flowers” was released in 2014.Like most of her generation, she left Iran after the green revolution in 2009. Her songs are mostly about immigration, love, and hope, and she is the creator of all of her music videos.</p>
-                            <p>The simplicity of lyrics and music in cooperation with a sad and modern feel of them made her very popular between the young population in Iran as well as Iranian all around the globe.</p>
-                          </div>
+                            <h2 class="En">Marjan Farsad</h2>
+                            <h2 class="fa">مرجان فرساد</h2>
+                            <div class="En">
+                              <p>She was born in 1983 in Tehran, Iran. Marjan Farsad is an animation filmmaker, illustrator, singer, and songwriter. Her debut album “Blue Flowers” was released in 2014.Like most of her generation, she left Iran after the green revolution in 2009. Her songs are mostly about immigration, love, and hope, and she is the creator of all of her music videos.</p>
+                              <p>The simplicity of lyrics and music in cooperation with a sad and modern feel of them made her very popular between the young population in Iran as well as Iranian all around the globe.</p>
+                            </div>
+                            <!--farsi-->
+                            <div class="fa">
+                              <p>مرجان فرساد (زاده ۱۳۶۲ تهران) انیماتور، تصویرگر، خواننده و ترانه‌سرای ایرانی ساکن مونترآل کانادا[۱] و بروکلین در نیویورک آمریکا است.</p>
 
-                      <div id="lyric">
+                              <p> او در سال ۱۳۸۸ به مونترآل کانادا مهاجرت کرد. ترانه‌های «پرتقال من» و «خونه ما» در شبکه‌های اجتماعی بازدید کنندگان زیادی داشته‌است. اغلب ویدئو کلیپ‌های او از انیمیشن‌های اوست و موسیقی و شعر ترانه‌هایش را خودش می‌سازد.</p>
+                              
+                              <p>  اولین آلبوم او «گل‌های آبی» در سال ۲۰۱۴ منتشر شد[۲]و آلبوم دوم او با نام «درخت سپید» در سال ۲۰۲۰ منتشر گردید.[۳] او در نیویورک، سان فرانسیسکو، تورنتو و سایر شهرها کنسرت‌های موفقی اجرا کرده‌است.</p>
+                            </div>
+                          </div><!--closing of hero div-->
 
-                          <h3>Blue Flowers Album</h3>
+                          <div id="lyric">
 
-                             <div>
-
-                                <button type="button" class="collapsible">Blue Flowers</button>
-                                <div class="content">
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                                 </div>
-
-                              </div>
-
-
-                               <div>
-
-                                   <button type="button" class="collapsible">Last Night</button>
-                                   <div class="content">
-                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                                   </div>
-
-                               </div>
+                              <h3 class="En">Blue Flowers Album</h3>
+                              <h3 class="fa">آلبوم گلهای آبی </h3>
 
 
-                               <div>
+                                  <div class="En">
 
-                                   <button type="button" class="collapsible">Our Home</button>
-                                   <div class="content">
-                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                                   </div>
+                                      <div class="collapsible">Blue Flowers</div>
+                                      <div class="content"class="holder">
+                                        <p>There is no translation available in English!</p>
+                                      </div>
 
-                              </div>
-
-
-                              <div>
-
-                                  <button type="button" class="collapsible">Dream</button>
-                                  <div class="content">
-                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                                   </div>
 
-                              </div>
+                                  <div class="fa"><!--farsi-->
 
+                                    <div class="collapsible">گلهای ابی</div>
+                                    <div class="content"class="holder">
+                                      <p>دلت یه سبزه زاره گل های آبی داره<br>
+                                        صبا از برگ گل هاش شبنم می باره<br>
+                                        توی چشات یه ردِ رنگین کمونی داره<br>
+                                        یه کلبه ی بهشت آسمونی داره<br>
+                                        لالا شب پره شب تا صبح می خونه<br>
+                                        دلم تا ابد پیش تو می مونه<br>
+                                        لالا شب پره شب تا صبح می خونه<br>
+                                        دلم تا ابد پیش تو می مونه<br>
+                                        
+                                        بوی تمیز موهات عطر بهاری داره<br>
+                                        دستات توی دلم بنفشه می کاره<br>
+                                        حرفات یه کتابه عکسای رنگی داره<br>
+                                        هر روز یه قصه و یه حرف تازه داره<br>
+                                        لالا شب پره شب تا صبح می خونه<br>
+                                        دلم تا ابد پیش تو می مونه<br>
+                                        لالا شب پره شب تا صبح می خونه<br>
+                                        دلم تا ابد پیش تو می مونه<br>
+                                        
+                                        لالا شب پره شب تا صبح می خونه<br>
+                                        دلم تا ابد پیش تو می مونه<br>
+                                        هر جا که بری تا برگردی خونه<br>
+                                        همیشه چشام منتظر می مونه</p>
+                                    </div>
 
-                              <div>
-                                 <button type="button" class="collapsible">Myth</button>
-                                 <div class="content">
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                 </div>
+                                
+
+                                  <div class="En">
+
+                                      <div class="collapsible">Last Night</div>
+                                      <div class="content" class="holder">
+                                        <p>There is no translation available in English!</p>
+                                      </div>
+
+                                  </div>
+
+                                  <div class="fa"><!--farsi-->
+
+                                    <div class="collapsible">دیشب</div>
+                                    <div class="content"class="holder">
+                                        <p> دیشب زیر نور ماه خوابیدم<br>
+                                        خوابِ تو و چشماتُ دیدم<br>
+                                        توی خواب لب هاتُ بوسیدم<br>
+                                        با یه بغضِ گنده از خواب پریدم<br>
+                                        
+                                        با مدادِ آبی و سفیدم<br>
+                                        عکس تو رو روی ماه کشیدم<br>
+                                        ابر اومد و روی ماهُ پوشوند<br>
+                                        تا سایه ی سیاهشُ دیدم<br>
+                                        دلم تنگ شد برای بوسه هامون<br>
+                                        گریه کردم هی چشمامُ مالیدم<br>
+                                        هی هی هی هی هی هی<br>
+                                        هی هی هی هی هی هی<br>
+                                        
+                                        تو ستاره برق چشماتُ دیدم<br>
+                                        به تنهاییِ خودم خندیدم<br>
+                                        تنهایی که شاخ و دم نداره<br>
+                                        میاد و یه کوه از غم میاره<br>
+                                        دلم تنگ شد برای خنده هامون<br>
+                                        میاد صدات از خاطره هامون<br>
+                                        هاها ها ها ها ها هاهاها<br>
+                                        ها ها هاها ها ها هاهاها<br>
+                                        
+                                        باد با یه قاصدک اومد<br>
+                                        نشست کنارم تا گریه‌م بند اومد<br>
+                                        گفت دیشب آروم خوابیدی<br>
+                                        خواب هفت تا پادشاهُ دیدی<br>
+                                        دلم تنگ شد برای لحظه هامون<br>
+                                        من موندم و صدای باد و بارون<br>
+                                        هوهوهو هو هوهو<br>
+                                        هو هو هو هو هوهو</p>
+                                    </div>
+
                                  </div>
 
-                              </div>	
+
+                                  <div class="En">
+
+                                      <div class="collapsible">Our Home</div>
+                                      <div class="content"class="holder">
+                                        <p>There is no translation available in English!</p>
+                                      </div>
+
+                                  </div>
+
+                                  <div class="fa"><!--farsi-->
+
+                                    <div class="collapsible">خانه ما</div>
+                                    <div class="content"class="holder">
+                                      <p> خونه ما دوره دوره<br>
+                                        پشت کوه های صبوره<br>
+                                        پشت دشتای طلایی<br>
+                                        پشت صحراهای خالی<br>
+                                        خونه ماست اونور آب<br>
+                                        اونور موجای بی ‌تاب<br>
+                                        پشت جنگای سروه<br>
+                                        توی رویاست، توی یه خواب<br>
+                                        پشت اقیانوس آبی<br>
+                                        پشت باغای گلابی<br>
+                                        اونور باغای انگور<br>
+                                        پشت کندوهای زنبور<br>
+                                        خونه ما، پشت ابراست<br>
+                                        اونور دلتنگی ماست<br>
+                                        ته جاده‌ های خیسه<br>
+                                        پشت بارون، پشت دریاست<br>
+                                        خونه ما، قصه داره<br>
+                                        آلبالو و پسته داره<br>
+                                        پشت خنده‌ های گرمش<br>
+                                        آدمای خسته داره<br>
+                                        خونه ما شادی داره<br>
+                                        توی حوضاش ماهی داره<br>
+                                        کوچه ‌هاش توپ‌ بازی داره<br>
+                                        گربه ‌های نازی داره<br>
+                                        خونه ما، گرم و صمیمی<br>
+                                        رو دیواراش عکسای قدیمی<br>
+                                        عکس بازی توی ایوون<br>
+                                        لب دریا تو تابستون<br>
+                                        عکس اون روز زیر بارون<br>
+                                        با یه بغض و یه چمدون<br>
+                                        رفتن از پیش آدمای<br>
+                                        نازنین و مهربون<br>
+                                        
+                                        خونه ما دور دوره<br>
+                                        پشت کوهای صبوره<br>
+                                        پشت دشتای طلایی<br>
+                                        پشت صحراهای خالی<br>
+                                        خونه ماست اونور آب<br>
+                                        اونور موجای بی تاب<br>
+                                        پشت جنگای سروه<br>
+                                        توی رویاست، توی یه خواب</p>
+                                    </div>
+
+                                 </div>
 
 
-                              <div>
-                                   <button type="button" class="collapsible">Orange</button>
-                                   <div class="content">
-                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                  <div class="En">
+
+                                      <div class="collapsible">Dream</div>
+                                      <div class="content" class="holder">
+                                        <p>There is no translation available in English!</p>
+                                      </div>
+
+                                  </div>
+
+                                  <div class="fa"><!--farsi-->
+
+                                    <div class="collapsible">رویا</div>
+                                    <div class="content"class="holder">
+                                      <p>پرواز کن با رویاهات<br>
+                                        رویاهات قشنگن<br>
+                                        انگار که همیشه<br>
+                                        تازه و خوش رنگن<br>
+                                        نگاه کن به باغمون<br>
+                                        گل هامون دلتنگن<br>
+                                        برو به یه جایی که<br>
+                                        پروانه هاش می خندن<br>
+                                        برو برو من خوب می دونم<br>
+                                        می دونم تو چه مهربونی<br>
+                                        برو برو دیگه چی بگم<br>
+                                        خودت همه چیزُ می دونی<br>
+                                        
+                                        پرواز کن برو نترس<br>
+                                        فردا ها قشنگن<br>
+                                        از اون بالا بالا بالاها<br>
+                                        بخند خنده هات قشنگن<br>
+                                        برو دنیا اینجور نمی مونه<br>
+                                        آدم که تا ابد تنها نمی مونه<br>
+                                        برو نترس من همین جام<br>
+                                        چشمام برات همیشه به آسمونه<br>
+                                        پرواز کن از رویا ها<br>
+                                        رویا ها قشنگن<br>
+                                        انگار که همیشه با حقیقت در جنگن<br>
+                                        پرواز کن</p>
+                                    </div>
+
+                                 </div>
+
+
+                                  <div class="En">
+                                    <div class="collapsible">Myth</div>
+                                    <div class="content"class="holder">
+                                      <p>There is no translation available in English!</p>
+                                    </div>
+
+                                  </div>	
+
+                                  <div class="fa"><!--farsi-->
+
+                                    <div class="collapsible">افسانه</div>
+                                    <div class="content"class="holder">
+                                      <p> عشق مثل تو قصه ها نیست<br>
+                                        حتی شبیه افسانه ها نیست<br>
+                                        ما هم یه عمری گول قصه ها رو خوردیم<br>
+                                        واسه هرکی برامون تب نمی کرد مردیم<br>
+                                        عشق همون چشمای خسته است<br>
+                                        همون دستای سرد و پینه بسته است<br>
+                                        عشق همون مهر مادری بود<br>
+                                        تو طعم خوب یه نهار سرسری بود<br>
+                                        عشق دلی که برات نگرونه<br>
+                                        همون نگاه که شاید یادت نمونه<br>
+                                        عشق لبخند یه دوست خوبه<br>
+                                        عشق کتاب خوندن وقت غروبه<br>
+                                        
+                                        عشق دلی که برات نگرونه<br>
+                                        همون نگاه که شاید یادت نمونه<br>
+                                        عشق اون هدیه است که دوست نداشتم<br>
+                                        عشق همون بود که براش هیچ وقتی نذاشتم<br>
+                                        عشق مثل تو قصه ها نیست<br>
+                                        حتی شبیه افسانه ها نیست<br>
+                                        ما هم یه عمری گول قصه ها رو خوردیم<br>
+                                        واسه هرکی برامون تب نمی کرد مردیم<br>
+                                        عشق همون چشمای خسته است<br>
+                                        همون دستای سرد و پینه بسته است<br>
+                                        عشق همون مهر مادری بود<br>
+                                        تو طعم خوب یه نهار سرسری بود<br>
+                                        عشق دلی که برات نگرونه<br>
+                                        همون نگاه که شاید یادت نمونه<br>
+                                        عشق اون هدیه است که دوست نداشتم<br>
+                                        عشق همون بود که براش هیچ وقتی نذاشتم</p>
+                                    </div>
+
+                                 </div>
+
+
+                                  <div class="En">
+                                      <div class="collapsible">Orange</div>
+                                      <div class="content" class="holder">
+                                        <p>There is no translation available in English!</p>
 
                                       </div>
 
-                              </div>
+                                    
+
+                                  </div>  
+                                  
+                                  <div class="fa"><!--farsi-->
+
+                                          <div class="collapsible">پرتقال من</div>
+                                          <div class="content"class="holder">
+                                            <p>بودنت هنوز مثل بارونه<br>
+                                            تازه و خنک و ناز و آرومه<br>
+                                            حتی الان از پشت این دیوار<br>
+                                            که ساختند تا دوستت نداشته باشم<br>
+                                            اتل و متل بهار بیرونه<br>
+                                            مرغابی تو باغش می‌خونه<br>
+                                            باغ من سرده<br>
+                                            همه ‌ی گل‌هاش پژمرده دونه دونه<br>
+                                            بارون بارونه، بارون بارونه<br>
+                                            بارون بارونه، بارون بارونه<br>
+                                            دلم تنگه پرتقال من<br>
+                                            گلپر سبز قلب زار من<br>
+                                            منو ببخش<br>
+                                            از برای تو هر چی که بخوای میارم<br>
+                                            اتل و متل نازنین دل<br>
+                                            زندگی خوبه و مهربونه<br>
+                                            عطر و بوش همین<br>
+                                            غم و شادی کوچیک و بزرگمونه<br>
+                                            آهای زمونه<br>
+                                            آهای زمونه<br>
+                                            این گردون تو کی داره می ‌چرخونه<br>
+                                            
+                                            بودنت هنوز مثل بارونه<br>
+                                            مثل قدیما پاک و روونه<br>
+                                            از پشت این دیوار بی‌رحمی که بینمونه<br>
+                                            هاچین و واچین<br>
+                                            عسل شیرین<br>
+                                            قصه‌ مون هنوز ناتمومه<br>
+                                            از این‌ جا به بعد<br>
+                                            کی می ‌دونه که چی سرنوشتمونه<br>
+                                            بارون بارونه، بارون بارونه<br>
+                                            بارون بارونه، بارون بارونه<br>
+                                            بارون بارونه، بارون بارونه<br>
+                                            بارون بارونه، بارون بارونه</p>
+                                          </div>
+      
+                                      </div>
 
 
-                      </div><!-- div id lyric-->
-                  </div>
+                          </div><!-- div id lyric-->
+                    </div><!--closing of collaps div-->
+                  </div><!--closing of background div-->
+              </div><!--closing of parallex2 div-->
+      </section>
+
+      <footer>
+
+          <section id="event" class="En">
+            <h3 class="color">Realese of new Album</h3>
+            <h3>concert and tours</h3>
+            <h3 class="color">Art</h3>
+          </section>
+
+          <section id="event" class="fa"><!--farsi-->
+            <h3 class="color">البوم جدید</h3>
+            <h3>کنسرت و تور</h3>
+            <h3 class="color">اثار هنری</h3>
+          </section>
+
+          <div class="container">
+            <form action="/action_page.php">
+              <div class="row">
+
+             
+
+                  <h3 id="signUpHeaderEn" class="En">Sign up for the latest news about her Album and tours </h3>
+                  <h3 id="signUpHeaderfa" class="fa"> جهت اطلاع از اخبار و رویداد ها ایمیل خود را وارد کنید</h3>
+
+                  <label for="username" ><b>username</b></label>
+                      <input id="username" type="text" name="username" placeholder="Jhonsmith@gmail.com" required>
+
+
+                  <label for="password" ><b>Password</b></label>
+                      <input id="password" type="password" name="password" placeholder="********" required>
+
+
+                  <label for="signup"></label>
+                      <input id="signup" type="submit" value="SIGN UP" class="En">
+                      <input id="signup" type="submit" value="ورود" class="fa">
+
               </div>
-            </section>
 
-            <footer>
+              
 
-                <section id="event">
-                 <h3 class="color">Realese of new Album</h3>
-                 <h3>concert and tours</h3>
-                 <h3 class="color">Art</h3>
-                </section>
+            </form>
 
-                <div class="container">
-                  <form action="/action_page.php">
-                    <div class="row">
-
-                       <div id="col">
-
-                         <i class="fab fa-facebook"><a href="#" class="fb btn"> Login with Facebook
-                        </a></i>
-                       </div>
-
-                        <div >
-                          <div id="hide-md-lg">
-                            <p>Or</p>
-                          </div>
-
-                           <label for="username" ><b>username</b></label>
-                              <input id="username" type="text" name="username" placeholder="Jhonsmith@gmail.com" required>
+          </div>
 
 
-                            <label for="password" ><b>Password</b></label>
-                              <input id="password" type="password" name="password" placeholder="********" required>
+          <ul id="social">
+              <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+              <li><a href="#"><i class="fab fa-itunes"></i></a></li>
+              <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+              <li><a href="#"><i class="fab fa-etsy"></i></a></li>
+          </ul>
 
+      </footer>
 
-                            <label for="signup"></label>
-                              <input id="signup" type="submit" value="SIGN UP">
-
-                        </div>
-
-                    </div>
-
-                  </form>
-
-                </div>
-
-
-                <ul id="social">
-                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="#"><i class="fab fa-itunes"></i></a></li>
-                    <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                    <li><a href="#"><i class="fab fa-etsy"></i></a></li>
-                </ul>
-
-              </footer>
-
-            </div>
-
-		  
-		  
-		  
-		  
-		  
-      <script>
-        var coll = document.getElementsByClassName("collapsible");
-        var i;
-
-        for (i = 0; i < coll.length; i++) {
-          coll[i].addEventListener("click", function() {
-            this.classList.toggle("active");
-            var content = this.nextElementSibling;
-            if (content.style.display === "block") {
-              content.style.display = "none";
-            } else {
-              content.style.display = "block";
-            }
-          });
-        }
-     </script>
-		  
-		  
-		  
+      </div><!--closing of page div-->
 
   </body>
 	   
 </html>
+
+
+
+

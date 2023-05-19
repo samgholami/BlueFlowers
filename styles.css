@@ -17,7 +17,9 @@ body,ul,li,h2,h3,p{
 
 
 * { box-sizing: border-box; }
-
+.fa{
+    text-align: right;
+}
 /**********-------header-----------*****/
 header{
     height: 700px;
@@ -25,32 +27,33 @@ header{
     background-image: url(images/header-mobile.jpg);
     background-repeat: no-repeat;
     background-position: center top;
+    background-color: #081116;
+    
 }
 
 
-nav ul {
+#languageBtn {
 	display:flex;
 	justify-content: flex-end;
 	margin:0px 10px;
-
 }
 
-nav a{
+button{
     text-align: center;
     color: #e3d6c3;
-    font-size: .6rem;
     list-style-type: none;
     background-color: #6699ff;
     border-radius:6px;
     border: 1px solid #6699FF;
     padding:2px 5px;
     width:50px;
-    margin: 10px 4px;
     text-decoration: none;
+    margin: 10px 4px;
 }
 
 
-nav a:hover{
+
+button:hover{
 	text-decoration: none;
 	background-color:#F7941D;
 	
@@ -61,12 +64,11 @@ h1{
 	font-size:2.8em;
 	color:#f7941d;
 	text-align: center;
-	margin:130px 40px 5px ;
-	
+	margin:110px 40px 5px ;	
 	
 }
 
-#h1{
+#h1 {
 	width:430px;
 	margin:auto;
 	position:relative;
@@ -81,17 +83,41 @@ header img{
 	top:27px;
 }
 
-#flowers{
+#flowers {
 	right:69px;
 	top:-11px;
 }
 
+#barg {
+    left:120px;
+    top:50px;
+}
 
-header h2{
+#gol{
+    right:186px;
+	top:-4px;
+    width:22px;
+    height:auto;
+}
+ 
+
+header h2.En, h2.fa{
 	color:#e3d6c3;
 	font-size:1.7em;
+    line-height: 1.5em;
 	text-align:center;
-	margin-bottom:210px;
+	
+}
+
+header h3.En, h3.fa{
+    color:#a09d9a;
+    font-size:.85em;
+    text-align:center;
+    margin-bottom:210px;}
+
+#CTA {
+    width:200px;
+    margin: auto;
 }
 
 #CTA li {
@@ -100,15 +126,16 @@ header h2{
      border: 1px solid #f7941d;
      padding: 10px;
      width:200px;
-     margin: 30px auto;
+     margin: 30px 0px;
 	 list-style-type: none;
 	 color: #081116;
 	 text-align: center;
      font-size:1.5rem;
 }
 
-#CTA a{
+#CTA li a{
 	text-decoration: none;
+     
 	
 }
 	
@@ -117,49 +144,49 @@ header h2{
 	text-decoration:underline;
 }
 
+
+
 /*****---------section Album------******/
 #album{
     background-image: url(images/background.jpg);
     background-position: left top;
     background-repeat: no-repeat;
 }
-#album img{
-	width:70vw;
-	height:auto;
-	margin:30px 15vw 10px;
-}
-#audiocontrol img{
-    width:90vw;
-	height:auto;
+#art{
+	margin:30px 10px;
 }
 
-#list{
-	margin:30px 0px 50px;
-	padding:0px 9vw;
-	
+
+#title{
+    margin: 0px 0px 10px 0px;
+}
+#card{
+    text-align: center;
+    padding: 30px 0px;
 }
 
-.list{
-	list-style-type: none;
-	display:flex;
-	border-top: 1px solid #E3D6C3;
-    background-image: url(images/playbutton.png);
-    background-position: left center;
-    background-repeat: no-repeat;
-	
+.item{
+    margin: 20px 0px;
+
+
 }
-.list h3{
-    margin: 5px 30px;
-    width: 60%;
+.item h3{
     color: #f7941d;
-   
- }
-.list p{
-	margin:0px;
-	font-size:.6rem;
-	padding:9px 0px;
-	font-family:'Lobster Two', cursive;
+    padding:10px 0px;
 }
+
+.item p{
+    font-size:.9rem;
+    font-family:'Lobster Two', cursive;
+}
+
+.is-active {
+    background:#0f0e0d3f;
+    transition: all .3s ease;
+    border-radius: 20px;
+    margin-right: 15px;
+}
+
 
 /******---------hero section-----**********/
 #hero h2{
@@ -174,8 +201,14 @@ header h2{
 	margin:20px 10vw;
 	line-height: 1.5rem;
 }
-#lyric{padding:0px 10vw 40px;}
 
+.sorryImg{
+    width:50px;
+    height:auto;
+}
+#lyric{
+    margin: 0px 10vw;
+}
 #lyric h3{
 	font-family:'Lobster Two', cursive;
 	color:#f7941d;
@@ -193,7 +226,6 @@ header h2{
     padding: 5px 10px;
     width: 100%;
     border: none;
-    text-align: left;
     outline: none;
     font-size:1rem;
 }
@@ -204,22 +236,24 @@ header h2{
 }
 
 /* Style the collapsible content. Note: hidden by default */
-.content{
-    padding: 10px;
-  
+.hide-menu {
     display: none;
+}
+
+.show-menu {
+    display: block;
+    padding: 10px;
+    font-size:.8rem;
     overflow: hidden;
-    background-color:#081116;
+    background-color:#0c1920;
     height:150px;
     width:100%;
     overflow-y: scroll;
- 
-  }
-.content p{font-size:.9rem;}
+}
 
 /******-------section event-----------****/
 #event{
-    padding: 50px 0px;
+    padding: 40px 0px 30px 0px;
     background-image: url(images/footer-background.jpg);
     background-position: center center;
     background-repeat: repeat-x;
@@ -236,7 +270,14 @@ header h2{
 }
 #event .color{
 	color:#B07022;
-	font-size:1.1rem;
+    font-size:1.1rem;
+}
+#signUpHeaderEn, #signUpHeaderfa {
+    font-size:1rem;
+    color:#B07022;
+    margin-top: 35px;
+    margin-bottom: 10px;
+
 }
 
 /****------footer------*****/
@@ -270,27 +311,12 @@ a:hover{
 
 /***--form--***/
 .container {
-    padding: 0px 16px;
+    padding: 0px 5vw;
 	margin:auto;
-	padding:12vw;
 	width:300px;
 
 }
-#col{
-    width:100%;
-    padding: 10px;
-    margin: 10px ;
-    display: inline-block;
-    border: none;
-    background: #1972E7;
-    border-radius: 8px;
-    border: 1px solid #1972E7;
-	
-}
-#col .fa-facebook, #col a{
-	color:#ffffff;
-	
-}
+
 input[type=text], input[type=password] {
     width:100%;
     padding: 10px;
@@ -321,6 +347,7 @@ input[type=text]:focus, input[type=password]:focus {
     opacity: 0.9;
     border-radius: 8px;
     border: 3px solid  #C77818;
+    text-align: center;
   
 }
 
@@ -341,150 +368,197 @@ input[type=text]:focus, input[type=password]:focus {
 
 
 
-@media only screen and (min-width: 510px){
+@media only screen and (min-width: 650px){
 	
-/********-------header-------*********/
-header{
-    background-image: url(images/header-580.jpg);
-    background-repeat: no-repeat;
-    background-position: right top;
-	}
+    /********-------header-------*********/
+    header{
+        background-image: url(images/header-580.jpg);
+        background-repeat: no-repeat;
+        background-position: right top;
+    }
+        
+    #h1{margin:0px;}
+        
+    #CTA.En{
+        margin-left:80px;
+        margin-top:20px;
+    }
+
+    #CTA.fa{
+        margin-left:120px;
+        margin-top:20px;
+
+    } 
+    header h2.En, header h2.fa{
+        text-align: left;
+        margin:20px 0px 0px 80px;
+    }
 	
-#h1{margin:0px;}
+    header h3.En, header h3.fa{
+        text-align: left;
+        margin:0px 0px 100px 80px;
+    }
+
+    header h2.fa, header h3.fa{
+        margin-left: 140px;
+    }
+    /********------album section-------********/
+    #album{
+        background-image: none;
+    }
+        
+    #parallex1{
+        background-image: url(images/album.jpg);	
+        background-attachment: fixed;
+        background-position: left bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
+    
+    }
+
+
+    #card {
+        justify-content: center;
+        margin:0px 40px; 
+        display: flex;
+    
+    } 
+
+    #display {
+        width: 60%;
+        border-radius: 20px 0 0 20px;
+        background: #0811167a; 
+        justify-content: center;
+        align-items: center;
+        padding: 1em;
+        text-align: center;
+    }
+
+    #title{
+        margin-top: 20px;
+    }
+    #art {
+        width:70%;
+        height:auto;
+        border-radius: 20px;
+    }
+
+    #list {
+        width: 40%;
+        border-radius: 0 20px 20px 0;
+        background: #0811167a; 
+        display: flex;
+        flex-direction: column;
+        margin: 0px;
+        padding:30px 1vw;
+    }
+
+    .item {
+        padding: 10px 1em 10px;
+        margin: 10px 0px;
+        
+        
+        transition: all .3s ease;
+    }
+    .item first-of-type {
+        border-radius: 0 20px 0 0;
+    }
+    .item last-of-type {
+        border-radius: 0 0 20px 0;
+    }
+
+
+    .item hover {
+        cursor: pointer;
+    }
+
+
+    #audio{
+        margin-bottom: 30px;
+    
+    } 
+    /********-------hero section----*******/
 	
-#CTA li {
-	margin-left:80px;
-	margin-top:20px;
-}
-header h2{
-	text-align: left;
-	margin:20px 0px 100px 80px;
-}
-	
-/********------album section-------********/
-#album{
-    background-image: none;
-}
-	
-#parallex1{
-    height:90vh;
-    background-image: url(images/album.jpg);	
-	background-attachment: fixed;
-    background-position: left bottom;
-    background-repeat: no-repeat;
-    background-size: cover;
-   
-}
-	
-#songlist{
-    display: flex;
-    flex-wrap: wrap;
-    margin:0px 40px;
-    background-color: #081116;
-    border-radius: 6px;
-    border: 1px solid #081116;
-	
-}
-	
-#songlist img{
-	flex-basis:35%;
-	order:1;
-	margin:40px 10px 30px 40px;
-	width:40vw;
-}
-#songlist #audiocontrol{
-	width:100%;
-	order:3;
-	margin:0px auto 30px;
-}
-#songlist #list{
-	order:2;
-	flex-basis:40%;
-	padding:0px;
-	margin:auto;
-}
-/********-------hero section----*******/
-	
-#collaps{
-    margin:0px 40px;
-    background-color: #081116;
-    border-radius: 6px;
-    border: 1px solid #081116;
-		
-}
-#hero h2{
-	margin-top:40px;
-}
-	
-#hero p{
-	margin:20px 120px; 
-}
-#lyric{
-	display:grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-column-gap:33px;
-	padding:0px 100px 40px;
-}
-#lyric h3{
-	grid-column: 1/4;
-}
-	
-#parallex2{
-    height: 90vh;
-    background-image: url(images/hero.jpg);
-    background-attachment: fixed;
-    background-position: left bottom;
-    background-repeat: no-repeat;
-    background-size: cover;   
-}
-	
-.background{
-    padding: 30px 0px;
-   }
-	
-/*********---------footer-------********/
-footer{
-	display:grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 1fr 60px ;
-	background-color:#081116;
-	padding:20px 6vw 50px;
-		
-}
-#event{
-    grid-column: 1/2;
-    grid-row: 1/2;
-    height: 250px;
-    background-position: center center;
-    background-repeat: repeat-x;
-	}
-	
-#social{
-	grid-column: 1/2;
-	grid-row:2/3;
-	
-}
-.container{
-	grid-column: 2/3;
-	grid-row:1/3;
-	padding:20px;
-	margin: auto;
-		
-}
+    #collaps{
+        margin:0px 40px;
+        background-color: #081116;
+        border-radius: 6px;
+        border: 1px solid #081116;
+            
+    }
+    #hero h2{
+        margin-top:40px;
+    }
+        
+    #hero p{
+        margin:20px 50px; 
+    }
+    #lyric{
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap:33px;
+        padding:0px 50px 40px;
+        margin:0px;
+    }
+    #lyric h3{
+        grid-column: 1/4;
+    }
+        
+    #parallex2{
+        background-image: url(images/hero.jpg);
+        background-attachment: fixed;
+        background-position: left bottom;
+        background-repeat: no-repeat;
+        background-size: cover;   
+    }
+        
+    .background{
+        padding: 30px 0px;
+    }
+        
+    /*********---------footer-------********/
+    footer{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 80px ;
+        background-color:#081116;
+        padding:20px 6vw 50px;
+            
+    }
+    #event{
+        grid-column: 1/2;
+        grid-row: 1/2;
+        height: 250px;
+        background-position: center center;
+        background-repeat: repeat-x;
+        }
+        
+    #social{
+        grid-column: 1/2;
+        grid-row:2/3;
+        
+    }
+    .container{
+        grid-column: 2/3;
+        grid-row:1/3;
+        padding:20px;
+        margin: auto;
+            
+    }
 }
 	
 	
 @media only screen and (min-width: 1000px){
-body{
-    background-image: url(images/background-1000-small.jpg);
-    background-position: left top;
-}
-#page{
-    width: 1000px;
-    margin: auto;
-    -webkit-box-shadow: 10px 10px 19px 26px hsla(189,100%,3%,1.00);
-    box-shadow: 10px 10px 19px 26px hsla(189,100%,3%,1.00);
-}
+    body{
+        background-image: url(images/background-1000-small.jpg);
+        background-position: left top;
+    }
+    #page{
+        width: 1000px;
+        margin: auto;
+        -webkit-box-shadow: 10px 10px 19px 26px hsla(189,100%,3%,1.00);
+        box-shadow: 10px 10px 19px 26px hsla(189,100%,3%,1.00);
+    }
 }
 	
 	
